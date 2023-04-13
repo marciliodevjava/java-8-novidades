@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 
 public class OrdenaStrings {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         List<String> palavras = new ArrayList<>();
         List<Integer> numeros = new ArrayList<>();
@@ -35,47 +35,45 @@ public class OrdenaStrings {
         };
 
         System.out.println("Palavras.");
-        for (String nome: palavras) {
+        for (String nome : palavras) {
             System.out.println(nome);
         }
 
         System.out.println("Números.");
-        for (Integer numero: numeros) {
+        for (Integer numero : numeros) {
             System.out.println(numero);
         }
 
         System.out.println("Palavras ordenadas.");
-        palavras.sort(comparadorString);
-        for (String nome: palavras) {
-            System.out.println(nome);
-        }
+        palavras.sort((s1, s2) -> {
+                    if (s1.length() < s2.length()) return -1;
+                    if (s1.length() > s2.length()) return 1;
+                    return 0;
+                }
+        );
+
+        palavras.sort((s1, s2) -> Integer.compare(s1.length(), s2.length()));
+
+        palavras.forEach(s -> System.out.println(s));
+
+        Consumer<String> impressor = s -> System.out.println(s);
+        palavras.forEach(impressor);
+
 
         System.out.println("Números ordenados.");
         numeros.sort(comparadorNumero);
-//        for (Integer numero: numeros) {
-//            System.out.println(numero);
-//        }
-
-        Consumer<String> consumidor = new ImprimeNaLinha();
-        palavras.forEach(consumidor);
+        numeros.forEach(System.out::println);
     }
 }
 
-class ImprimeNaLinha implements Consumer<String>{
 
-    @Override
-    public void accept(String s) {
-        System.out.println(s);
-    }
-}
-
-class  ComparadorPorTamanho implements Comparator<String>{
+class ComparadorPorTamanho implements Comparator<String> {
 
     @Override
     public int compare(String s1, String s2) {
 
-        if(s1.length() < s2.length()) return -1;
-        if(s1.length() > s2.length()) return 1;
+        if (s1.length() < s2.length()) return -1;
+        if (s1.length() > s2.length()) return 1;
         return 0;
     }
 
