@@ -72,6 +72,13 @@ public class OrdenaStrings {
         System.out.println("Números ordenados.");
         numeros.sort(comparadorNumero);
         numeros.forEach(System.out::println);
+
+        palavras.sort(Comparator.comparing(s -> s.length()));
+
+
+        System.out.println("Ordem alfabetica");
+        Collections.sort(palavras);
+        palavras.forEach(System.out::println);
     }
 
 }
