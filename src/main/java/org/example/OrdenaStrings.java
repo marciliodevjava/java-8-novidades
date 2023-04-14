@@ -62,9 +62,11 @@ public class OrdenaStrings {
         Function<String, Integer> funcao = s -> s.length();
         Comparator<String> comparador = Comparator.comparing(funcao);
         palavras.sort(comparador);
+        palavras.sort(Comparator.comparing(String::length));
 
         Consumer<String> impressor = s -> System.out.println(s);
         palavras.forEach(impressor);
+        palavras.forEach(System.out::println);
 
 
         System.out.println("Números ordenados.");
