@@ -3,6 +3,7 @@ package org.example.test;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 
 public class ExemplosDeCursos {
 
@@ -38,6 +39,6 @@ public class ExemplosDeCursos {
 
         System.out.println(sum);
 
-        cursos.stream().filter(c -> c.getAlunos() >= 100).findAny();
+        Optional<Cursos> curso = cursos.stream().filter(c -> c.getAlunos() >= 100).findAny();
     }
 }
