@@ -37,5 +37,7 @@ public class ExemplosDeCursos {
                 .mapToInt(c -> c.getAlunos()).sum();
 
         System.out.println(sum);
+
+        cursos.stream().filter(c -> c.getAlunos() >= 100).findAny();
     }
 }
