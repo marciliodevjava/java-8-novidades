@@ -45,5 +45,6 @@ public class ExemplosDeCursos {
 
         System.out.println("====================");
         System.out.println(curso.getNome());
+
     }
 }
