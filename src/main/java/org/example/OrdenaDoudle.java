@@ -8,6 +8,5 @@ public class OrdenaDoudle implements Comparator<Double> {
         if (o1 < o2) return -1;
         if (o1 > o2) return 1;
         return 0;
-
     }
 }
