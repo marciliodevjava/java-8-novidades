@@ -47,11 +47,10 @@ public class OrdenaStrings {
 
         System.out.println("Palavras ordenadas.");
         palavras.sort((s1, s2) -> {
-                    if (s1.length() < s2.length()) return -1;
-                    if (s1.length() > s2.length()) return 1;
-                    return 0;
-                }
-        );
+            if (s1.length() < s2.length()) return -1;
+            if (s1.length() > s2.length()) return 1;
+            return 0;
+        });
 
         palavras.sort((s1, s2) -> Integer.compare(s1.length(), s2.length()));
 
