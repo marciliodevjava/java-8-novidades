@@ -7,7 +7,7 @@ import java.util.Optional;
 
 public class ExemplosDeCursos {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         List<Cursos> cursos = new ArrayList<>();
         List<Cursos> cursos2 = new ArrayList<>();
@@ -21,7 +21,7 @@ public class ExemplosDeCursos {
             cursos2.add(c);
         });
 
-        for (Cursos imprime: cursos2) {
+        for (Cursos imprime : cursos2) {
             System.out.println(imprime.toString());
         }
 
@@ -29,13 +29,9 @@ public class ExemplosDeCursos {
         cursos.forEach(c -> System.out.println(c.getNome()));
 
         System.out.println("Cursos com mais de 100 Alunos");
-        cursos.stream()
-                .filter(c -> c.getAlunos() >= 100)
-                .forEach(c -> System.out.println(c.getNome()));
+        cursos.stream().filter(c -> c.getAlunos() >= 100).forEach(c -> System.out.println(c.getNome()));
 
-        int sum = cursos.stream()
-                .filter(c -> c.getAlunos() >= 100)
-                .mapToInt(c -> c.getAlunos()).sum();
+        int sum = cursos.stream().filter(c -> c.getAlunos() >= 100).mapToInt(c -> c.getAlunos()).sum();
 
         System.out.println(sum);
 
