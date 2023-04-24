@@ -45,7 +45,9 @@ public class ExemplosDeCursos {
 
         Map<String, Integer> map = cursos.stream()
                                             .filter(c -> c.getAlunos() >= 100 )
-                                            .collect(Collectors.toMap(c -> c.getNome(), c -> c.getAlunos()));
+                                            .collect(Collectors.toMap(
+                                                    c -> c.getNome(),
+                                                    c -> c.getAlunos()));
 
         System.out.println("Impressão do map");
         System.out.println(map);
