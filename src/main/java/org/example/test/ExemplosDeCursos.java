@@ -1,9 +1,7 @@
 package org.example.test;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class ExemplosDeCursos {
 
@@ -33,14 +31,25 @@ public class ExemplosDeCursos {
 
         int sum = cursos.stream().filter(c -> c.getAlunos() >= 100).mapToInt(c -> c.getAlunos()).sum();
 
+        OptionalDouble sum1 = cursos.stream().filter(c -> c.getAlunos() >= 100).mapToInt(c -> c.getAlunos()).average();
+
         System.out.println(sum);
 
-        Optional<Cursos> optinalCurso = cursos.stream().filter(c -> c.getAlunos() >= 100).findAny();
+        cursos.stream().filter(c -> c.getAlunos() >= 100)
+                                                .findAny().ifPresent(c -> System.out.println(c.getNome()));
 
-        Cursos curso = optinalCurso.orElse(null);
 
         System.out.println("====================");
-        System.out.println(curso.getNome());
 
+        cursos =  cursos.stream().filter(c -> c.getAlunos() >= 100).collect(Collectors.toList());
+
+        Map<String, Integer> map = cursos.stream()
+                                            .filter(c -> c.getAlunos() >= 100 )
+                                            .collect(Collectors.toMap(c -> c.getNome(), c -> c.getAlunos()));
+
+        System.out.println("Impressão do map");
+        System.out.println(map);
+
+        cursos.forEach(System.out::println);
     }
 }
