@@ -1,0 +1,23 @@
+
+C
+java:S1604"(Make this anonymous inner class a lambda(¥ñ¹ˆúÿÿÿÿ
+Z
+java:S1854"DRemove this useless assignment to local variable "comparadorString".(¤õÄô
+K
+java:S1481"5Remove this unused "comparadorString" local variable.(¤õÄô
+N	java:S106&"9Replace this use of System.out or System.err by a logger.(í‰±œ
+S	java:S106("9Replace this use of System.out or System.err by a logger.(¹ß€ïúÿÿÿÿ
+S	java:S106+"9Replace this use of System.out or System.err by a logger.(ÇÉìƒûÿÿÿÿ
+N	java:S106-"9Replace this use of System.out or System.err by a logger.(™¢Â¹
+S	java:S1060"9Replace this use of System.out or System.err by a logger.(¾¢‰ôÿÿÿÿÿ
+[
+java:S1612;"@Replace this lambda with method reference 'System.out::println'.(¡â¸Ðøÿÿÿÿ
+S	java:S106;"9Replace this use of System.out or System.err by a logger.(¡â¸Ðøÿÿÿÿ
+[
+java:S1612B"@Replace this lambda with method reference 'System.out::println'.(ñåâãýÿÿÿÿ
+S	java:S106B"9Replace this use of System.out or System.err by a logger.(ñåâãýÿÿÿÿ
+M	java:S106D"9Replace this use of System.out or System.err by a logger.(â’ß~
+N	java:S106G"9Replace this use of System.out or System.err by a logger.(¦ÖÃå
+N	java:S106I"9Replace this use of System.out or System.err by a logger.(öã¯ð
+S	java:S106N"9Replace this use of System.out or System.err by a logger.(ÃÞî¶øÿÿÿÿ
+M	java:S106P"9Replace this use of System.out or System.err by a logger.(â’ß~
